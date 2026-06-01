@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { PlusCircle, Send } from "lucide-react";
-import { createProduct } from "@/services/productService"; // Importing your centralized service
+import { createProduct } from "@/services/productService"; // Centralized service
 import Swal from "sweetalert2"; 
 
 export default function CreateProductPage() {
@@ -29,7 +29,7 @@ export default function CreateProductPage() {
     e.preventDefault();
     setLoading(true);
 
-    try {
+  	try {
       // Formatting payload types correctly before passing to the service layer
       const productPayload = {
         ...form,
@@ -40,7 +40,7 @@ export default function CreateProductPage() {
       // Calling your product making service layer directly
       await createProduct(productPayload);
 
-      // SweetAlert Premium Success Modal
+      // SweetAlert Premium Success Modal with Async Routing Callback
       Swal.fire({
         title: "Product Created!",
         text: "The new inventory asset has been added successfully via ProductService.",
@@ -49,10 +49,11 @@ export default function CreateProductPage() {
         customClass: {
           popup: "rounded-3xl font-sans",
         }
+      }).then(() => {
+        // User ke "OK" click karne ke baad redirect aur refresh hoga taake data instant render ho
+        router.push("/products"); 
+        router.refresh();
       });
-      
-      router.push("/products"); 
-      router.refresh();
 
     } catch (error) {
       console.error("Communication failure on product service channel:", error);
@@ -115,6 +116,7 @@ export default function CreateProductPage() {
                 onChange={handleChange}
                 value={form.price}
                 placeholder="e.g., 99.99"
+                step="any"
                 className="w-full mt-2 p-4 border border-gray-200 rounded-2xl outline-none font-mono font-bold focus:ring-2 focus:ring-blue-500 transition"
                 required
               />
