@@ -1,0 +1,10 @@
+1st cmnd : npm install next@latest react@latest react-dom@latest --legacy-peer-deps
+
+2nd cmnd : npm install --legacy-peer-deps
+
+3rd cmnd : npm run build
+
+4th cmnd : npm run dev
+
+
+dont install this : Yaad rakhein: Abhi ke liye npm audit fix --force mat chalana, kyunki woh vulnerabilities theek karne ke liye phir se koi package sasta ya purana kar dega aur cheezain break ho jayengi. --legacy-peer-deps laga kar install karo, sab set chalega!
