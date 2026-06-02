@@ -1,10 +1,10 @@
-# Enterprise-Grade Next-Gen Architectural Sourcing Marketplace
+hi# Enterprise-Grade Next-Gen Architectural Sourcing Marketplace
 
 An ultra-high-performance, secure, and modern full-stack e-commerce ecosystem engineered using **Next.js 14 (App Router)** on the client-side, powered by a robust and optimized **MERN (MongoDB, Express.js, React, Node.js)** core on the backend server pipeline.
 
 ---
 
-## 🚀 Executive Summary & Project Philosophy
+## Executive Summary & Project Philosophy
 
 ### What is this platform?
 This marketplace is a modern, high-throughput B2C/B2B solution engineered to eliminate traditional e-commerce latencies, complex middleware bottlenecks, and untrustworthy global supply layers. By utilizing a completely decoupled architectural strategy, the application interfaces directly with verified global storage nodes and vendor pipelines, delivering a fluid, zero-buffer consumer experience.
@@ -17,7 +17,7 @@ Traditional monolithic or poorly optimized e-commerce applications suffer from c
 
 ---
 
-## 🛠️ Deep-Dive Architecture & Core Workflows
+## Deep-Dive Architecture & Core Workflows
 
 The system is separated into two clean, self-contained architectural modules: **The Client User Interface (Frontend)** and **The Core Transactional Engine (Backend)**.
 
@@ -72,7 +72,7 @@ The backend engine operates on **Node.js** combined with **Express.js** controll
 
 ---
 
-## 📊 Live Performance Benchmarks & Runtime Metrics
+## Live Performance Benchmarks & Runtime Metrics
 
 Local development and production logging confirm elite runtime performance across all core operations:
 
@@ -86,7 +86,7 @@ Local development and production logging confirm elite runtime performance acros
 
 ---
 
-## 🚀 Environment Initialization & Production Compilation
+## Environment Initialization & Production Compilation
 
 Follow these step-by-step commands to clone, initialize, and deploy the stack into optimized hosting environments (e.g., AWS, DigitalOcean, Vercel):
 
